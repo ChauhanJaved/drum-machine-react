@@ -1,12 +1,13 @@
 import { Fragment } from 'react';
 import './App.css';
+import DrumMachine from './components/DrumMachine';
 
 function App() {
+  
   return (
     <Fragment>
-      <h1>Drum Machine</h1>
+      <DrumMachine />     
     </Fragment>
   );
 }
-
 export default App;
