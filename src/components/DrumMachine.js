@@ -1,11 +1,13 @@
-import React from 'react'
+import {  useState, React } from 'react'
 import DrumPadElements from './DrumPadElements'
 
 export default function DrumMachine() {
+  const [audioClipText, setAudioClipText] = useState("");  
+
   return (
     <div id="drum-machine">        
-        <DrumPadElements />
-        <div id="display">DISPLAY</div>        
+        <DrumPadElements setAudioClipText={setAudioClipText} />
+        <div id="display">{audioClipText}</div>        
     </div>
   )
 }

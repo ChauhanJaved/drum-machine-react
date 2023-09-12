@@ -1,6 +1,18 @@
-import React, { Fragment } from 'react'
+import React, {useEffect, Fragment } from 'react'
 
-export default function DrumPadElements() {
+export default function DrumPadElements(props) {
+    useEffect(() => {
+      const handleKeyDown = (e) => {
+        const pressedKey = e.key.toUpperCase();
+        const pressedDrumPad = drumPads.find((pad) => pad.key === pressedKey);
+        pressedDrumPad && playAudio(pressedDrumPad.key, pressedDrumPad.src, pressedDrumPad.description);
+      };
+      document.addEventListener("keydown", handleKeyDown);
+      return() => {
+        document.removeEventListener("keydown", handleKeyDown);        
+      };
+    },[]); 
+    const {setAudioClipText} = props
     const drumPads = [
         {
           key: 'Q',
@@ -46,11 +58,20 @@ export default function DrumPadElements() {
           description: 'Closed-HH'
         }
       ]
+      const playAudio = (key, src, description) => {        
+        setAudioClipText(description);
+        document.getElementById(key).play();
+
+
+      };
   return (    
        <Fragment>
         {
             drumPads.map((pad) => (
-                <div id={pad.key} key={pad.key} className="drum-pad">{pad.key}</div>
+                <div id={pad.key + pad.description} key={pad.key} className="drum-pad" onClick={() => playAudio(pad.key, pad.src, pad.description )}>
+                  {pad.key}
+                  <audio src={pad.src} className="clip" id={pad.key}></audio>
+                </div>
             ))
         }
        </Fragment>
