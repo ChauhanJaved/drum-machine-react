@@ -61,8 +61,6 @@ export default function DrumPadElements(props) {
       const playAudio = (key, src, description) => {        
         setAudioClipText(description);
         document.getElementById(key).play();
-
-
       };
   return (    
        <Fragment>
