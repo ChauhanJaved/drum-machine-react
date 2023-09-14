@@ -1,2 +1,0 @@
-body,html{align-items:center;display:flex;height:100%;justify-content:center;margin:0;padding:0;width:100%}#root{border:1px solid;margin:10px}#drum-machine{flex-direction:row}#drum-machine,.drum-pad{align-items:center;display:flex}.drum-pad{border:1px solid red;border-radius:5px;box-sizing:border-box;cursor:pointer;height:100px;justify-content:center;margin:10px;text-align:center;width:80px}
-/*# sourceMappingURL=main.41367174.css.map*/

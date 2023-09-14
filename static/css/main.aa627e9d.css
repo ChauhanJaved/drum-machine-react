@@ -1,0 +1,2 @@
+*{box-sizing:border-box;margin:0;padding:0}#root,body,html{height:100%;width:100%}#root{align-items:center;display:flex;flex-direction:column;justify-content:center}#drum-machine{display:grid;grid-template-columns:auto auto auto;height:360px;width:300px}#display{font-size:large;margin-bottom:10px}.drum-pad{align-items:center;border:1px solid red;border-radius:5px;box-sizing:border-box;cursor:pointer;display:flex;height:100px;justify-content:center;margin:10px;text-align:center;width:80px}
+/*# sourceMappingURL=main.aa627e9d.css.map*/
