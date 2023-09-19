@@ -5,15 +5,21 @@
 }
 html, body {
     height: 100%;
-    width: 100%;    
+    width: 100%;
+    background-color: #dabeb3;  
+    padding: 20px;;  
 }
+
 #root {
     height: 100%;
-    width: 100%;        
+    width: 60%;        
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #000000;
+    border-radius:10px;
 }
 #drum-machine {
     height: 360px;
@@ -22,8 +28,9 @@ html, body {
     grid-template-columns: auto auto auto;
 }
 #display {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-size: large;    
+    color: white;
 }
 .drum-pad {
     height: 100px;
@@ -31,10 +38,13 @@ html, body {
     border-radius: 5px;
     box-sizing: border-box;
     cursor: pointer;
-    border: 1px solid red;
+    background-color: #fff7f3;
     margin: 10px;    
     text-align: center;
     display: flex;   
     justify-content: center;
     align-items: center;
+}
+.drum-pad:hover {
+    background-color: #dabeb3;  
 }
